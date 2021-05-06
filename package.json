@@ -2,8 +2,7 @@
   "name": "redux-zero-single-action",
   "version": "1.0.0",
   "description": "Redux-zero single action",
-  "main": "index.js",
-  "private": true,
+  "main": "dist/index.js",
   "homepage": "",
   "keywords": [
     "redux-zero",
