@@ -1,0 +1,63 @@
+{
+  "name": "redux-zero-single-action",
+  "version": "0.0.0",
+  "description": "Redux-zero single action",
+  "main": "index.js",
+  "private": true,
+  "homepage": "",
+  "keywords": [
+    "redux-zero",
+    "state management",
+    "single action"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Engiweb/redux-zero-single-action.git"
+  },
+  "scripts": {
+    "transpile": "babel src --out-dir dist --ignore \"src/**/*.test.js\"",
+    "test": "npm run lint && npm run test:unit",
+    "test:unit": "jest --no-cache",
+    "test:unit:coverage": "npm run test:unit -- --coverage",
+    "test:unit:watch": "npm run test:unit -- --watch",
+    "lint": "eslint --ext .js src/ .*.js",
+    "lint:watch": "npm run lint -- --watch",
+    "lint:fix": "npm run lint -- --fix"
+  },
+  "author": {
+    "name": "Christian Carestia",
+    "email": "info@engiweb.com",
+    "url": "https://engiweb.com"
+  },
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.13.16",
+    "@babel/core": "^7.14.0",
+    "@babel/eslint-parser": "^7.13.14",
+    "@babel/node": "^7.10.4",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-proposal-export-namespace-from": "^7.10.4",
+    "@babel/plugin-proposal-throw-expressions": "^7.10.4",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/runtime": "^7.10.4",
+    "babel-jest": "^26.1.0",
+    "eslint": "^7.17.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-security": "^1.4.0",
+    "fs": "0.0.1-security",
+    "husky": "^4.3.7",
+    "jest": "^26.3.0",
+    "webpack": "^4.44.2",
+    "webpack-node-externals": "^2.5.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run test",
+      "post-commit": ""
+    }
+  }
+}
