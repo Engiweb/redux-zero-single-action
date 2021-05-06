@@ -1,6 +1,6 @@
 {
   "name": "redux-zero-single-action",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Redux-zero single action",
   "main": "index.js",
   "private": true,
