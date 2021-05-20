@@ -1,5 +1,6 @@
 import {
   GENERAL_SET,
+  GENERAL_APPEND,
   GENERAL_DELETE,
   BOOLEAN_TOGGLE,
   NUMBER_ADD,
@@ -62,6 +63,59 @@ describe('Actions', () => {
             child: {
               otherSubchild: 'test',
               subchild: value
+            }
+          }
+        }
+
+        expect(singleAction(state, { keys, action, value })).toEqual(newState)
+      })
+    })
+
+    describe('GENERAL_APPEND', () => {
+      it('should work correctly when single key', () => {
+        const keys = [
+          'parent',
+        ]
+
+        const value = 'new'
+        const action = GENERAL_APPEND
+
+        const state = {
+          parent: 'old'
+        }
+
+        const newState = {
+          parent: `old${value}`
+        }
+
+        expect(singleAction(state, { keys, action, value })).toEqual(newState)
+      })
+
+      it('should work correctly when multi key', () => {
+        const keys = [
+          'parent',
+          'child',
+          'subchild'
+        ]
+        const value = 'new'
+        const action = GENERAL_APPEND
+
+        const state = {
+          parent: {
+            otherChild: 'test',
+            child: {
+              otherSubchild: 'test',
+              subchild: 'old'
+            }
+          }
+        }
+
+        const newState = {
+          parent: {
+            otherChild: 'test',
+            child: {
+              otherSubchild: 'test',
+              subchild: 'oldnew',
             }
           }
         }

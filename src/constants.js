@@ -1,6 +1,7 @@
 // general
 export const GENERAL_SET = 'set'
 export const GENERAL_DELETE = 'delete'
+export const GENERAL_APPEND = 'append'
 
 // booleans
 export const BOOLEAN_TOGGLE = 'booleanToggle'

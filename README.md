@@ -71,6 +71,15 @@ singleAction({
     })
 ```
 
+* GENERAL_APPEND: append value to subkey
+```
+singleAction({
+      keys: ['propToSet', 'propToSetSubKey', 'propToSetSubSubKey'],
+      action: GENERAL_APPEND,
+      value: 'new'
+    })
+```
+
 * GENERAL_DELETE: remove key
 ```
 singleAction({
@@ -165,6 +174,14 @@ Having a single action bring an additional simplification, as:
 * less actions to connect to components and pass around
 * less code
 * focus on functions development rather than store actions
+
+## Publishing
+
+Use *np* to publish the new version to npm.
+```
+  git add .
+  git commit -m "Message"
+```
 
 ## Next steps
 * Add example folder

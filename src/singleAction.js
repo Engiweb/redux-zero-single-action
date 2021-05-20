@@ -1,5 +1,6 @@
 import {
   GENERAL_SET,
+  GENERAL_APPEND,
   GENERAL_DELETE,
   BOOLEAN_TOGGLE,
   NUMBER_ADD,
@@ -22,6 +23,7 @@ import {
 * @param {Array} payload.keys Array which contains state key and optional subkeys
 * @param {String} payload.action Action name from the following list:
 *                                  GENERAL_SET,
+*                                  GENERAL_APPEND,
 *                                  GENERAL_DELETE,
 *                                  BOOLEAN_TOGGLE,
 *                                  NUMBER_ADD,
@@ -53,6 +55,10 @@ const singleAction = (state, { keys, action = GENERAL_SET, value = undefined }) 
       // general
       if (action === GENERAL_SET) {
         subValues[index][currentKey] = value
+      }
+
+      if (action === GENERAL_APPEND) {
+        subValues[index][currentKey] += value
       }
 
       if (action === GENERAL_DELETE) {
