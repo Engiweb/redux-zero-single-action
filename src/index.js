@@ -2,6 +2,7 @@ import singleAction from './singleAction'
 
 export {
   GENERAL_SET,
+  GENERAL_APPEND,
   GENERAL_DELETE,
   BOOLEAN_TOGGLE,
   NUMBER_ADD,

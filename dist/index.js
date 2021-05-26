@@ -11,6 +11,12 @@ Object.defineProperty(exports, "GENERAL_SET", {
     return _constants.GENERAL_SET;
   }
 });
+Object.defineProperty(exports, "GENERAL_APPEND", {
+  enumerable: true,
+  get: function get() {
+    return _constants.GENERAL_APPEND;
+  }
+});
 Object.defineProperty(exports, "GENERAL_DELETE", {
   enumerable: true,
   get: function get() {
