@@ -25,6 +25,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 * @param {Array} payload.keys Array which contains state key and optional subkeys
 * @param {String} payload.action Action name from the following list:
 *                                  GENERAL_SET,
+*                                  GENERAL_APPEND,
 *                                  GENERAL_DELETE,
 *                                  BOOLEAN_TOGGLE,
 *                                  NUMBER_ADD,
@@ -55,6 +56,10 @@ var singleAction = function singleAction(state, _ref) {
       // general
       if (action === _constants.GENERAL_SET) {
         subValues[index][currentKey] = value;
+      }
+
+      if (action === _constants.GENERAL_APPEND) {
+        subValues[index][currentKey] += value;
       }
 
       if (action === _constants.GENERAL_DELETE) {

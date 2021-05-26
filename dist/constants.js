@@ -3,13 +3,15 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.ARRAY_DELETE_INDEX = exports.ARRAY_DELETE = exports.ARRAY_TOGGLE = exports.ARRAY_PUSH_UNIQUE = exports.ARRAY_PUSH = exports.OBJECT_SPREAD = exports.NUMBER_MULTIPLY = exports.NUMBER_ADD = exports.BOOLEAN_TOGGLE = exports.GENERAL_DELETE = exports.GENERAL_SET = void 0;
+exports.ARRAY_DELETE_INDEX = exports.ARRAY_DELETE = exports.ARRAY_TOGGLE = exports.ARRAY_PUSH_UNIQUE = exports.ARRAY_PUSH = exports.OBJECT_SPREAD = exports.NUMBER_MULTIPLY = exports.NUMBER_ADD = exports.BOOLEAN_TOGGLE = exports.GENERAL_APPEND = exports.GENERAL_DELETE = exports.GENERAL_SET = void 0;
 // general
 var GENERAL_SET = 'set';
 exports.GENERAL_SET = GENERAL_SET;
-var GENERAL_DELETE = 'delete'; // booleans
-
+var GENERAL_DELETE = 'delete';
 exports.GENERAL_DELETE = GENERAL_DELETE;
+var GENERAL_APPEND = 'append'; // booleans
+
+exports.GENERAL_APPEND = GENERAL_APPEND;
 var BOOLEAN_TOGGLE = 'booleanToggle'; // numbers
 
 exports.BOOLEAN_TOGGLE = BOOLEAN_TOGGLE;
