@@ -59,7 +59,11 @@ var singleAction = function singleAction(state, _ref) {
       }
 
       if (action === _constants.GENERAL_APPEND) {
-        subValues[index][currentKey] += value;
+        if (!subValues[index][currentKey]) {
+          subValues[index][currentKey] = value;
+        } else {
+          subValues[index][currentKey] += value;
+        }
       }
 
       if (action === _constants.GENERAL_DELETE) {
