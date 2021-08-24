@@ -1,6 +1,6 @@
 {
   "name": "redux-zero-single-action",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Redux-zero single action",
   "main": "dist/index.cjs.js",
   "homepage": "https://github.com/Engiweb/redux-zero-single-action",
