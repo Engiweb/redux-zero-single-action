@@ -1,51 +1,74 @@
 module.exports = {
-  root: true,
-  env: {
-    node: true,
-    jest: true
-  },
-  parser: '@babel/eslint-parser',
+  parser: '@typescript-eslint/parser',
   parserOptions: {
+    ecmaVersion: 2020,
     sourceType: 'module',
-    allowImportExportEverywhere: false,
-    ecmaFeatures: {
-      globalReturn: false,
-    }
+    ecmaFeatures: {},
   },
-  extends: [
-    'eslint-config-airbnb-base',
-    'eslint:recommended',
-    'plugin:security/recommended',
-  ],
-  plugins: [
-    'import',
-    'security',
-  ],
-  globals: {
-    Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly',
-    React: 'writable',
-    localStorage: true
+  env: {
+    browser: true,
+    node: true,
+    jest: true,
   },
+  extends: ['plugin:@typescript-eslint/recommended', 'prettier'],
+  plugins: ['@typescript-eslint'],
+  settings: {},
   rules: {
-    'import/prefer-default-export': 0,
-    'linebreak-style': ['error', 'unix'],
-    'comma-dangle': ['error', 'only-multiline'],
-    quotes: [2, 'single', { avoidEscape: true }],
-    'no-nested-ternary': 0,
-    'no-underscore-dangle': 0,
-    'class-methods-use-this': 0,
-    'no-case-declarations': 0,
-    'import/extensions': 0,
-    'no-restricted-syntax': 0,
-    'guard-for-in': 0,
-    'no-await-in-loop': 0,
-    'no-continue': 0,
-    'max-len': [2, 200, 4, { ignoreUrls: true }],
-    semi: [2, 'never'],
-    radix: 0,
-    'security/detect-object-injection': 0,
-    'no-plusplus': 0,
-    'consistent-return': 0
-  }
+    semi: ['error', 'never'],
+    quotes: ['error', 'single', 'avoid-escape'],
+    // 'comma-dangle': ['error', 'always-multiline'],
+    '@typescript-eslint/member-delimiter-style': [
+      'error',
+      {
+        multiline: {
+          delimiter: 'none',
+        },
+        singleline: {
+          delimiter: 'comma',
+        },
+      },
+    ],
+    '@typescript-eslint/member-ordering': [
+      'error',
+      {
+        default: [
+          // Index signature
+          'signature',
+
+          // Fields
+          'private-static-field',
+          'protected-static-field',
+          'public-static-field',
+          'private-decorated-field',
+          'protected-decorated-field',
+          'public-decorated-field',
+          'private-instance-field',
+          'protected-instance-field',
+          'public-instance-field',
+          'private-abstract-field',
+          'protected-abstract-field',
+          'public-abstract-field',
+
+          // Constructors
+          'public-constructor',
+          'protected-constructor',
+          'private-constructor',
+
+          // Methods
+          'private-static-method',
+          'protected-static-method',
+          'public-static-method',
+          'private-decorated-method',
+          'protected-decorated-method',
+          'public-decorated-method',
+          'private-instance-method',
+          'protected-instance-method',
+          'public-instance-method',
+          'private-abstract-method',
+          'protected-abstract-method',
+          'public-abstract-method',
+        ],
+      },
+    ],
+  },
 }

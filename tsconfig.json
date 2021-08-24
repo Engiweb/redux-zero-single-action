@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "moduleResolution": "node",
+    "module": "esnext",
+    "jsx": "react",
+    // "lib": ["dom", "es2020"],
+    "esModuleInterop": true,
+    "strict": true,
+    "skipLibCheck": true,
+    // "alwaysStrict": true,
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "emitDeclarationOnly": true,
+
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+
+    "sourceMap": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "typeRoots": ["@types", "node_modules/@types"],
+
+    "outDir": "dist",
+    "declaration": true,
+    "declarationDir": "@types"
+  },
+  "files": ["src/index.ts"],
+  "include": ["src/global.d.ts", "src/**/*.ts", "test/**/*.ts"],
+  "exclude": ["dist", "node_modules"]
+}
