@@ -1,0 +1,5 @@
+export { GENERAL_SET, GENERAL_APPEND, GENERAL_DELETE, BOOLEAN_TOGGLE, NUMBER_ADD, NUMBER_MULTIPLY, OBJECT_SPREAD, ARRAY_PUSH, ARRAY_PUSH_UNIQUE, ARRAY_TOGGLE, ARRAY_DELETE, ARRAY_DELETE_INDEX } from './constants';
+declare const _default: {
+    singleAction: (state: import("../@types/types").RzsaGenericObject, payload: import("../@types/types").RzsaPayload) => import("../@types/types").RzsaOutput;
+};
+export default _default;

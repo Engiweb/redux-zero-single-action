@@ -24,7 +24,7 @@
   },
   "module": "dist/index.esm.js",
   "browser": "dist/index.umd.js",
-  "types": "@types/types.d.ts",
+  "types": "@types/index.d.ts",
   "files": [
     "dist",
     "types"
@@ -44,7 +44,9 @@
     "test:cov": "npm run test -- --coverage",
     "test:watch": "npm run test -- --watchAll --notify",
     "types:check": "tsc --noEmit",
-    "types:watch": "npm run types:check -- --watch"
+    "types:watch": "npm run types:check -- --watch",
+    "declaration": "tsc --declaration",
+    "declaration:bundle": "typings bundle -o @types/index.d.ts"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
@@ -71,7 +73,6 @@
     "ts-jest": "^26.1.1",
     "typescript": "^3.8.3"
   },
-  "dependencies": {},
   "husky": {
     "hooks": {
       "pre-commit": "npm run test",

@@ -1,0 +1,12 @@
+export declare const GENERAL_SET = "set";
+export declare const GENERAL_DELETE = "delete";
+export declare const GENERAL_APPEND = "append";
+export declare const BOOLEAN_TOGGLE = "booleanToggle";
+export declare const NUMBER_ADD = "numberAdd";
+export declare const NUMBER_MULTIPLY = "numberMultiply";
+export declare const OBJECT_SPREAD = "objectSpread";
+export declare const ARRAY_PUSH = "arrayPush";
+export declare const ARRAY_PUSH_UNIQUE = "arrayPushUnique";
+export declare const ARRAY_TOGGLE = "arrayToggle";
+export declare const ARRAY_DELETE = "arrayDelete";
+export declare const ARRAY_DELETE_INDEX = "arrayDeleteIndex";
